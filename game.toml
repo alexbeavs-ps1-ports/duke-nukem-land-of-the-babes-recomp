@@ -6,7 +6,9 @@ name = "Duke Nukem: Land of the Babes"
 id = "SLUS-01002"
 players = 1
 exe = "disc/SLUS_010.02"
-disc = ""
+disc = "disc/Duke Nukem - Land of the Babes (USA).cue"
+discs = ["disc/Duke Nukem - Land of the Babes (USA).cue"]
+disc_serials = ["SLUS-01002"]
 load_address = "0x80010000"
 entry_pc = "0x80059A64"
 text_size = "0x00067800"
@@ -30,11 +32,13 @@ known_crc32 = [
 ]
 
 [recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+openbios = false
 window_title = "duke-nukem-land-of-the-babes- Recompiled"
 memcard_dir = "saves"
 
